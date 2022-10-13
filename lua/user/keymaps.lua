@@ -42,9 +42,9 @@ keymap("n", "<leader>l", ":<C-u>nohlsearch<CR>", opts)
 keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 
--- Navigate buffers
-keymap("n", "R", ":bnext<CR>", opts)
-keymap("n", "E", ":bprevious<CR>", opts)
+-- Navigate buffers (bufferline instead)
+-- keymap("n", "R", ":bnext<CR>", opts)
+-- keymap("n", "E", ":bprevious<CR>", opts)
 
 -- Insert --
 -- Press kj fast to Normal mode
@@ -78,3 +78,49 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+
+-- Nvimtree
+keymap("n", "tt", "<Cmd>NvimTreeFindFileToggle<CR>", opts)
+
+-- bufferline
+keymap("n", "R", ":BufferLineCycleNext<CR>", opts)
+keymap("n", "E", ":BufferLineCyclePrev<CR>", opts)
+
+-- hop
+vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
+vim.api.nvim_set_keymap('', 'F', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>", {})
+vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>", {})
+vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>", {})
+vim.api.nvim_set_keymap('', '<leader>s', "<cmd>lua require'hop'.hint_char2()<cr>", {})
+vim.api.nvim_set_keymap('', '<leader>/', "<cmd>lua require'hop'.hint_patterns()<cr>", {})
+vim.api.nvim_set_keymap('', '<leader><leader>l', "<cmd>lua require'hop'.hint_lines()<cr>", {})
+vim.api.nvim_set_keymap('', '<leader><leader>j', "<cmd>lua require'hop'.hint_lines({direction = require'hop.hint'.HintDirection.AFTER_CURSOR})<cr>", {})
+vim.api.nvim_set_keymap('', '<leader><leader>k', "<cmd>lua require'hop'.hint_lines({direction = require'hop.hint'.HintDirection.BEFORE_CURSOR})<cr>", {})
+
+-- telescope
+-- local telescope_status_ok, tbuiltin = pcall(require,'telescope.builtin')
+-- if telescope_status_ok then
+-- 	vim.keymap.set('n', '<leader>ff', tbuiltin.find_files, {})
+-- 	vim.keymap.set('n', '<leader>F', tbuiltin.find_files(require('telescope.themes').get_dropdown{previewer = false}), {})
+-- 	vim.keymap.set('n', '<leader>fG', tbuiltin.live_grep, {})
+-- 	vim.keymap.set('n', 'fb', tbuiltin.buffers, {})
+-- 	vim.keymap.set('n', 'fh', tbuiltin.help_tags, {})
+-- end
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+vim.keymap.set("n", "<leader>F", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
+vim.keymap.set("n", "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", opts)
+vim.keymap.set("n", "<leader>fG", "<cmd>Telescope grep_string<cr>", opts)
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
+vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", opts)
+vim.keymap.set("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", opts)
+vim.keymap.set("n", "<leader>fy", "<cmd>lua require('telescope').extensions.neoclip.default()<cr>", opts)
+vim.keymap.set("n", "<leader>fs", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>", opts)
+vim.keymap.set("n", "<leader>fS", "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>", opts)
+vim.keymap.set("n", "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", opts)
+vim.keymap.set("n", "<leader>ft", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>", opts)
+vim.keymap.set("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>", opts)
+vim.keymap.set("n", "<leader>fi", "<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", opts)
+vim.keymap.set("n", "<leader>fe", "<cmd>lua require('telescope.builtin').diagnostics()<cr>", opts)
+
