@@ -76,15 +76,19 @@ return require('packer').startup(function(use)
 	use "nvim-treesitter/nvim-treesitter-refactor"
 	use "p00f/nvim-ts-rainbow"
 
-	--telescope
+	-- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
 	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S . -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use "nvim-telescope/telescope-live-grep-args.nvim"
 	use "AckslD/nvim-neoclip.lua"
 	use "da-moon/telescope-toggleterm.nvim"
 
-	--toggleterm
+	-- toggleterm
 	use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+
+	-- git
+	use "lewis6991/gitsigns.nvim"
+	use "sindrets/diffview.nvim"
 
 	-- cmp
 	use "hrsh7th/nvim-cmp" -- The completion plugin

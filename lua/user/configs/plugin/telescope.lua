@@ -15,6 +15,13 @@ telescope.setup {
 		-- 	}
 		-- },
 		path_display = "smart",
+
+		-- layout_config = {
+		-- 	horizontal = {
+		-- 		prompt_position = "top"
+		-- 	}
+		-- },
+
     mappings = {
 			i = {
         ["<C-n>"] = actions.cycle_history_next,

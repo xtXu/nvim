@@ -125,3 +125,10 @@ vim.keymap.set("n", "<leader>fi", "<cmd>lua require('telescope.builtin').lsp_imp
 vim.keymap.set("n", "<leader>fe", "<cmd>lua require('telescope.builtin').diagnostics()<cr>", opts)
 vim.keymap.set("n", "<leader>ftt", "<cmd>Telescope toggleterm<cr>", opts)
 
+
+-- diffview
+vim.keymap.set("n", "<leader>df", "<cmd>DiffviewOpen<CR>", opts)
+vim.keymap.set("n", "<leader>dh", "<cmd>DiffviewFileHistory<CR>", opts)
+vim.keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>", opts)
+vim.keymap.set("n", "<leader>dr", "<cmd>DiffviewRefresh<CR>", opts)
+vim.keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>", opts)
