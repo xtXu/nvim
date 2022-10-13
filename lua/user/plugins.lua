@@ -81,6 +81,10 @@ return require('packer').startup(function(use)
 	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S . -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 	use "nvim-telescope/telescope-live-grep-args.nvim"
 	use "AckslD/nvim-neoclip.lua"
+	use "da-moon/telescope-toggleterm.nvim"
+
+	--toggleterm
+	use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
 
 	-- cmp
 	use "hrsh7th/nvim-cmp" -- The completion plugin

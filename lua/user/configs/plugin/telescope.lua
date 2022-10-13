@@ -82,12 +82,6 @@ telescope.setup {
 }
 
 
--- require("telescope-toggleterm").setup {
--- 	telescope_mappings = {
---       -- <ctrl-c> : kill the terminal buffer (default) .
---       ["<C-c>"] = require("telescope-toggleterm").actions.exit_terminal,
---    },
--- }
 
 local fzf_status_ok, _ = pcall(require, "fzf_lib")
 if fzf_status_ok then
@@ -104,5 +98,16 @@ if args_status_ok then
 	telescope.load_extension("live_grep_args")
 end
 
--- telescope.load_extension('toggleterm')
+local term_status_ok, term = pcall(require, "telescope-toggleterm")
+if term_status_ok then
+	term.setup {
+		telescope_mappings = {
+			-- <K> : kill the terminal buffer (default) .
+			["K"] = term.actions.exit_terminal,
+			["<C-c>"] = actions.close,
+		},
+	}
+telescope.load_extension('toggleterm')
+end
+
 

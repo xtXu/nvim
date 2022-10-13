@@ -119,8 +119,9 @@ vim.keymap.set("n", "<leader>fy", "<cmd>lua require('telescope').extensions.neoc
 vim.keymap.set("n", "<leader>fs", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>", opts)
 vim.keymap.set("n", "<leader>fS", "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>", opts)
 vim.keymap.set("n", "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", opts)
-vim.keymap.set("n", "<leader>ft", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>", opts)
+vim.keymap.set("n", "<leader>ftd", "<cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>", opts)
 vim.keymap.set("n", "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<cr>", opts)
 vim.keymap.set("n", "<leader>fi", "<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", opts)
 vim.keymap.set("n", "<leader>fe", "<cmd>lua require('telescope.builtin').diagnostics()<cr>", opts)
+vim.keymap.set("n", "<leader>ftt", "<cmd>Telescope toggleterm<cr>", opts)
 
