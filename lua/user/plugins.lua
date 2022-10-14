@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
 	use "lukas-reineke/indent-blankline.nvim"
 	use "windwp/nvim-autopairs"
 	use "andymass/vim-matchup"
+	use "ahmedkhalf/project.nvim"
 
 	-- treesitter
 	use {
@@ -82,6 +83,7 @@ return require('packer').startup(function(use)
 	use "nvim-telescope/telescope-live-grep-args.nvim"
 	use "AckslD/nvim-neoclip.lua"
 	use "da-moon/telescope-toggleterm.nvim"
+	-- use "nvim-telescope/telescope-project.nvim"
 
 	-- toggleterm
 	use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
