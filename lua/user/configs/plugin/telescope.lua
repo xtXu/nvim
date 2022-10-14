@@ -117,4 +117,10 @@ if term_status_ok then
 telescope.load_extension('toggleterm')
 end
 
+-- local project_status_ok, _ = pcall(require, "telescope._extensions.project" )
+local project_status_ok, _ = pcall(require, "project_nvim" )
+if project_status_ok then
+	telescope.load_extension('projects')
+end
+
 

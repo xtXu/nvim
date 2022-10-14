@@ -46,6 +46,9 @@ local kind_icons = {
   TypeParameter = "",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
+--
+-- local select_behavior = cmp.SelectBehavior.Select
+local select_behavior = cmp.SelectBehavior.Insert
 
 cmp.setup {
 	sorting = {
@@ -67,8 +70,8 @@ cmp.setup {
     end,
   },
   mapping = {
-    ["<C-k>"] = cmp.mapping.select_prev_item{ behavior = cmp.SelectBehavior.Select },
-		["<C-j>"] = cmp.mapping.select_next_item{ behavior = cmp.SelectBehavior.Select },
+    ["<C-k>"] = cmp.mapping.select_prev_item{ behavior = select_behavior },
+		["<C-j>"] = cmp.mapping.select_next_item{ behavior = select_behavior },
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -82,7 +85,7 @@ cmp.setup {
     ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        cmp.select_next_item{ behavior = cmp.SelectBehavior.Select }
+        cmp.select_next_item{ behavior = select_behavior }
       elseif luasnip.expandable() then
         luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
