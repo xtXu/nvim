@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 	use {'akinsho/bufferline.nvim', tag = "v2.*"}
 
+
 	-- feature
 	use "numToStr/Comment.nvim"
 	use "tpope/vim-surround"
@@ -66,6 +67,8 @@ return require('packer').startup(function(use)
 	use "windwp/nvim-autopairs"
 	use "andymass/vim-matchup"
 	use "ahmedkhalf/project.nvim"
+	-- use "Shatur/neovim-session-manager"
+	use "jedrzejboczar/possession.nvim"
 
 	-- treesitter
 	use {
@@ -83,6 +86,7 @@ return require('packer').startup(function(use)
 	use "nvim-telescope/telescope-live-grep-args.nvim"
 	use "AckslD/nvim-neoclip.lua"
 	use "da-moon/telescope-toggleterm.nvim"
+	use "nvim-telescope/telescope-ui-select.nvim"
 	-- use "nvim-telescope/telescope-project.nvim"
 
 	-- toggleterm

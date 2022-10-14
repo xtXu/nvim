@@ -14,7 +14,8 @@ telescope.setup {
 		-- 		exclude = {1, -1, -2}
 		-- 	}
 		-- },
-		path_display = "smart",
+		path_display = {"smart"},
+		file_ignore_patterns = {"build/", "devel/" ,"logs/"},
 
 		-- layout_config = {
 		-- 	horizontal = {
@@ -85,6 +86,11 @@ telescope.setup {
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
     },
+		["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+        -- even more opts
+      }
+		}
   }
 }
 
@@ -124,3 +130,12 @@ if project_status_ok then
 end
 
 
+local ui_status_ok, _ = pcall(require, "telescope._extensions.ui-select")
+if ui_status_ok then
+	telescope.load_extension("ui-select")
+end
+
+local session_status_ok, _ = pcall(require, "possession")
+if session_status_ok then
+	telescope.load_extension("possession")
+end
