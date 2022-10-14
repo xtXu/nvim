@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
 	use "nvim-tree/nvim-tree.lua"
 	use "nvim-lualine/lualine.nvim"
 	use {'akinsho/bufferline.nvim', tag = "v2.*"}
+	use "goolord/alpha-nvim"
 
 
 	-- feature
@@ -79,6 +80,7 @@ return require('packer').startup(function(use)
 	use 'nvim-treesitter/nvim-treesitter-context'
 	use "nvim-treesitter/nvim-treesitter-refactor"
 	use "p00f/nvim-ts-rainbow"
+	use "nvim-treesitter/playground"
 
 	-- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
