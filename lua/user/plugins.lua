@@ -68,8 +68,9 @@ return require('packer').startup(function(use)
 	use "windwp/nvim-autopairs"
 	use "andymass/vim-matchup"
 	use "ahmedkhalf/project.nvim"
-	-- use "Shatur/neovim-session-manager"
+	use "Shatur/neovim-session-manager"
 	use "jedrzejboczar/possession.nvim"
+	use 'simrat39/symbols-outline.nvim'
 
 	-- treesitter
 	use {

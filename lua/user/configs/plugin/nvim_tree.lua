@@ -5,7 +5,8 @@ if not status_ok then
 end
 
 nvimtree.setup { -- BEGIN_DEFAULT_OPTS
-	open_on_setup = true,
+	-- open_on_setup = true,
+	-- ignore_ft_on_setup = {"alpha"},
 	diagnostics = {
 		enable = true,
 		show_on_dirs = false,

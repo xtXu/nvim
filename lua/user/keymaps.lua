@@ -134,3 +134,7 @@ vim.keymap.set("n", "<leader>dh", "<cmd>DiffviewFileHistory<CR>", opts)
 vim.keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>", opts)
 vim.keymap.set("n", "<leader>dr", "<cmd>DiffviewRefresh<CR>", opts)
 vim.keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>", opts)
+
+-- symbols-outline
+vim.keymap.set("n", "<leader>o", "<cmd>SymbolsOutline<CR>", opts)
+
