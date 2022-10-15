@@ -82,6 +82,7 @@ return require('packer').startup(function(use)
 	use "nvim-treesitter/nvim-treesitter-refactor"
 	use "p00f/nvim-ts-rainbow"
 	use "nvim-treesitter/playground"
+	use "nvim-treesitter/nvim-treesitter-textobjects"
 
 	-- telescope
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }
@@ -107,6 +108,8 @@ return require('packer').startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+	use "hrsh7th/cmp-nvim-lsp-document-symbol" -- cmd line symbol source
+	use "hrsh7th/cmp-nvim-lsp-signature-help"
 
 	-- snip engine & snip source
 	use {"L3MON4D3/LuaSnip", tag = "v1.*"}

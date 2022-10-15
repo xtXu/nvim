@@ -125,7 +125,7 @@ vim.keymap.set("n", "<leader>fi", "<cmd>Telescope lsp_implementations initial_mo
 vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics initial_mode=normal<cr>", opts)
 vim.keymap.set("n", "<leader>ftt", "<cmd>Telescope toggleterm initial_mode=normal<cr>", opts)
 vim.keymap.set("n", "<leader>fpr", "<cmd>Telescope projects<cr>", opts)
-vim.keymap.set("n", "<leader>fps", "<cmd>Telescope possession list<cr>", opts)
+-- vim.keymap.set("n", "<leader>fps", "<cmd>Telescope possession list<cr>", opts)
 
 
 -- diffview
@@ -138,3 +138,5 @@ vim.keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>", opts)
 -- symbols-outline
 vim.keymap.set("n", "<leader>o", "<cmd>SymbolsOutline<CR>", opts)
 
+-- session_manager
+vim.keymap.set("n", "<leader>fps", "<cmd>SessionManager load_session<cr>", opts)
