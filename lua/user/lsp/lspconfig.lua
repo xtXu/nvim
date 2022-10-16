@@ -38,12 +38,15 @@ lspconfig['cmake'].setup(opt)
 
 -- Clangd
 local clangd_opt = require("user.lsp.settings.clangd")
+-- local clangd_opts = vim.tbl_deep_extend("force", clangd_opt, opt)
+-- lspconfig['clangd'].setup(clangd_opts)
 clangd.setup {
 	server = {
 		on_attach = handlers.on_attach,
 		capabilities = handlers.capabilities,
 		cmd = clangd_opt.cmd,
 		root_dir = clangd_opt.root_dir,
+		filetypes = clangd_opt.filetypes
 	},
 	extensions = {
 		-- defaults:

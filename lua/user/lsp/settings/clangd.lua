@@ -8,7 +8,7 @@ return {
     "--cross-file-rename=true",
     "--header-insertion=never",
     "--pch-storage=memory",
-    "--function-arg-placeholders=true",
+    "--function-arg-placeholders",
     "--log=verbose",
     "--ranking-model=decision_forest",
     "--header-insertion-decorators",
@@ -24,5 +24,7 @@ return {
 		'compile_flags.txt',
 		'configure.ac',
 		'.git'
-	)
+	),
+
+	filetypes = {"c", "cc", "cpp", "objc", "objcpp", "cuda", "proto" }
 }

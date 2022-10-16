@@ -47,8 +47,8 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 --
--- local select_behavior = cmp.SelectBehavior.Select
-local select_behavior = cmp.SelectBehavior.Insert
+local select_behavior = cmp.SelectBehavior.Select
+-- local select_behavior = cmp.SelectBehavior.Insert
 
 cmp.setup {
 	sorting = {
@@ -132,7 +132,7 @@ cmp.setup {
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
-		{ name = 'nvim_lsp_signature_help' },
+		-- { name = 'nvim_lsp_signature_help' },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
