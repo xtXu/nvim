@@ -6,6 +6,8 @@ end
 
 bufferline.setup {
 	options = {
+		show_buffer_close_icons = false,
+		separator = "thin",
 		numbers = "buffer_id",
 		diagnostics = "nvim_lsp",
 		diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -27,7 +29,7 @@ bufferline.setup {
 			items = {
 				{
 					name = "Main", -- Mandatory
-					highlight = {underline = true, sp = "blue"}, -- Optional
+					-- highlight = {underline = true, sp = "blue"}, -- Optional
 					priority = 1, -- determines where it will appear relative to other groups (Optional)
 					matcher = function(buf) -- Mandatory
 						return buf.filename:match('%.cpp') or buf.filename:match('%.h') or buf.filename:match('%.py')
@@ -35,7 +37,7 @@ bufferline.setup {
 				},
 				{
 					name = "Docs",
-					highlight = {undercurl = true, sp = "green"},
+					-- highlight = {undercurl = true, sp = "green"},
 					auto_close = false,
 					matcher = function(buf)
 						return buf.filename:match('%.md') or buf.filename:match('%.txt')
@@ -46,7 +48,7 @@ bufferline.setup {
 				},
 				{
 					name = "Config",
-					highlight = {undercurl = true, sp = "green"},
+					-- highlight = {undercurl = true, sp = "green"},
 					auto_close = false,
 					matcher = function(buf)
 						return buf.filename:match('%.launch') or buf.filename:match('%.yaml') or buf.filename:match('%.xml')
