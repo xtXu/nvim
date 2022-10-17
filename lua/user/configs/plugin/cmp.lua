@@ -47,8 +47,8 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 --
-local select_behavior = cmp.SelectBehavior.Select
--- local select_behavior = cmp.SelectBehavior.Insert
+-- local select_behavior = cmp.SelectBehavior.Select
+local select_behavior = cmp.SelectBehavior.Insert
 
 cmp.setup {
 	sorting = {
@@ -141,9 +141,13 @@ cmp.setup {
 		select = false,
 	},
 	window = {
-		bordered = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		-- bordered = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		-- bordered = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
 		-- completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+		-- documentation = cmp.config.window.bordered(),
+		documentation = {
+			border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
+		}
 	},
 	experimental = {
 		ghost_text = true,

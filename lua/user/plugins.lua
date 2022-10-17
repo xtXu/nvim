@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 	use {'akinsho/bufferline.nvim', tag = "v2.*"}
 	use "goolord/alpha-nvim"
+	use "stevearc/dressing.nvim"
 
 
 	-- feature
