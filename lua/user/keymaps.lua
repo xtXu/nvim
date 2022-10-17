@@ -46,6 +46,12 @@ keymap("n", "N", "Nzz", opts)
 -- keymap("n", "R", ":bnext<CR>", opts)
 -- keymap("n", "E", ":bprevious<CR>", opts)
 
+-- quit
+keymap("n", "<leader>q", ":q<cr>", opts)
+keymap("n", "<leader>Q", ":qa<cr>", opts)
+keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", "<leader>W", ":wa<cr>", opts)
+
 -- Insert --
 -- Press kj fast to Normal mode
 keymap("i", "kj", "<ESC>", opts)
