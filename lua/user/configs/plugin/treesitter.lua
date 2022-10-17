@@ -114,6 +114,17 @@ require 'nvim-treesitter.configs'.setup {
 			-- and should return true of false
 			include_surrounding_whitespace = true,
 		},
+
+		textobjects = {
+			lsp_interop = {
+				enable = true,
+				border = 'single',
+				peek_definition_code = {
+					["<leader>pf"] = "@function.outer",
+					["<leader>pc"] = "@class.outer",
+				},
+			},
+		},
 	},
 
 	playground = {

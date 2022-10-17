@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
 	-- UI
 	use "nvim-tree/nvim-tree.lua"
 	use "nvim-lualine/lualine.nvim"
+	use "arkav/lualine-lsp-progress"
 	use {'akinsho/bufferline.nvim', tag = "v2.*"}
 	use "goolord/alpha-nvim"
 	use "stevearc/dressing.nvim"
@@ -72,6 +73,7 @@ return require('packer').startup(function(use)
 	use "Shatur/neovim-session-manager"
 	use "jedrzejboczar/possession.nvim"
 	use 'simrat39/symbols-outline.nvim'
+	-- use "famiu/bufdelete.nvim"
 
 	-- treesitter
 	use {

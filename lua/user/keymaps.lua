@@ -140,3 +140,8 @@ vim.keymap.set("n", "<leader>o", "<cmd>SymbolsOutline<CR>", opts)
 
 -- session_manager
 vim.keymap.set("n", "<leader>fps", "<cmd>SessionManager load_session<cr>", opts)
+
+-- bufdelete
+-- vim.keymap.set("n", "<leader>bd", ":Bdelete<cr>", opts)
+vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", opts)
+
