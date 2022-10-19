@@ -47,10 +47,10 @@ keymap("n", "N", "Nzz", opts)
 -- keymap("n", "E", ":bprevious<CR>", opts)
 
 -- quit
-keymap("n", "<leader>q", ":q<cr>", opts)
-keymap("n", "<leader>Q", ":qa<cr>", opts)
-keymap("n", "<leader>w", ":w<cr>", opts)
-keymap("n", "<leader>W", ":wa<cr>", opts)
+keymap("n", "<leader>q", ":q<cr>", { noremap = true})
+keymap("n", "<leader>Q", ":qa<cr>", { noremap = true})
+keymap("n", "<leader>w", ":w<cr>", { noremap = true})
+keymap("n", "<leader>W", ":wa<cr>", { noremap = true})
 
 -- Insert --
 -- Press kj fast to Normal mode
@@ -103,6 +103,12 @@ vim.api.nvim_set_keymap('', '<leader>/', "<cmd>lua require'hop'.hint_patterns()<
 vim.api.nvim_set_keymap('', '<leader><leader>l', "<cmd>lua require'hop'.hint_lines()<cr>", {})
 vim.api.nvim_set_keymap('', '<leader><leader>j', "<cmd>lua require'hop'.hint_lines({direction = require'hop.hint'.HintDirection.AFTER_CURSOR})<cr>", {})
 vim.api.nvim_set_keymap('', '<leader><leader>k', "<cmd>lua require'hop'.hint_lines({direction = require'hop.hint'.HintDirection.BEFORE_CURSOR})<cr>", {})
+
+
+vim.api.nvim_del_keymap('s', 'f')
+vim.api.nvim_del_keymap('s', 'F')
+vim.api.nvim_del_keymap('s', 't')
+vim.api.nvim_del_keymap('s', 'T')
 
 -- telescope
 -- local telescope_status_ok, tbuiltin = pcall(require,'telescope.builtin')

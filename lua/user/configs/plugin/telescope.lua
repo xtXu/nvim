@@ -90,6 +90,15 @@ telescope.setup {
       require("telescope.themes").get_dropdown {
         -- even more opts
       }
+		},
+
+		live_grep_args = {
+			default_mappings = {
+				i = {
+					["<C-j>"] = actions.move_selection_next,
+					["<C-k>"] = actions.move_selection_previous,
+				}
+			},
 		}
   }
 }

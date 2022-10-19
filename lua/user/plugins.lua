@@ -78,6 +78,7 @@ return require('packer').startup(function(use)
 	-- treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
+		commit = 'e53950f646b0c11624280ee7c4eff97a9e0904f1',
 		run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
 	}
 	use "JoosepAlviste/nvim-ts-context-commentstring"

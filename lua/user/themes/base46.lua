@@ -1,4 +1,6 @@
-vim.g.nvchad_theme =  'onedark'
+-- vim.g.nvchad_theme =  'onedark'
+vim.g.nvchad_theme =  'tokyonight'
+-- vim.g.nvchad_theme =  'tokyodark'
 require("base46").load_theme()
 require("base46").load_highlight "syntax"
 require("base46").load_highlight "treesitter"
