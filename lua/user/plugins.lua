@@ -127,6 +127,8 @@ return require('packer').startup(function(use)
 	use "neovim/nvim-lspconfig"
 	use "p00f/clangd_extensions.nvim"
 
+	use "lervag/vimtex"
+
 	--use {
   --  'numToStr/Comment.nvim',
   --  config = function()

@@ -36,6 +36,9 @@ lspconfig['jsonls'].setup(opt)
 -- cmake
 lspconfig['cmake'].setup(opt)
 
+-- texlab
+lspconfig['texlab'].setup(opt)
+
 -- Clangd
 local clangd_opt = require("user.lsp.settings.clangd")
 -- local clangd_opts = vim.tbl_deep_extend("force", clangd_opt, opt)
