@@ -157,3 +157,7 @@ vim.keymap.set("n", "<leader>fps", "<cmd>SessionManager load_session<cr>", opts)
 -- vim.keymap.set("n", "<leader>bd", ":Bdelete<cr>", opts)
 vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", opts)
 
+-- markdown previewer
+vim.keymap.set("n", "<leader>mdp", ":MarkdownPreviewToggle<cr>", opts)
+
+
