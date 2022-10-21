@@ -26,6 +26,7 @@ mason_lspconfig.setup({
 		"jsonls",			--require: nodejs
 		"clangd",
 		"sumneko_lua",
+		"marksman",
 	},
 	automatic_installation = false,
 })
