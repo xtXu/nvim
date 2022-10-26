@@ -50,6 +50,11 @@ local kind_icons = {
 -- local select_behavior = cmp.SelectBehavior.Select
 local select_behavior = cmp.SelectBehavior.Insert
 
+local MAX_ABBR_WIDTH = 35
+local get_ws = function (max, len)
+  return (" "):rep(max - len)
+end
+
 cmp.setup {
 	sorting = {
 		comparators = {
@@ -125,6 +130,12 @@ cmp.setup {
 				buffer = "[Buffer]",
 				path = "[Path]",
 			})[entry.source.name]
+			-- vim_item.abbr = string.sub(vim_item.abbr,1,35)
+			if #vim_item.abbr > MAX_ABBR_WIDTH then
+				vim_item.abbr = string.sub(vim_item.abbr, 1, MAX_ABBR_WIDTH)
+			else
+				vim_item.abbr = vim_item.abbr .. get_ws(MAX_ABBR_WIDTH, #vim_item.abbr)
+			end
 			return vim_item
 		end,
 	},
@@ -174,3 +185,4 @@ cmp.setup.cmdline(':', {
 		{ name = 'cmdline' }
 	})
 })
+

@@ -19,6 +19,7 @@ local options = {
   autoindent = true,
   showmatch = false,
   hidden = true,
+	pumheight = 30,
 }
 
 vim.opt.shortmess:append "c"
