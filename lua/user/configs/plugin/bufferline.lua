@@ -8,7 +8,10 @@ bufferline.setup {
 	options = {
 		show_buffer_close_icons = false,
 		separator = "thin",
-		numbers = "buffer_id",
+		-- numbers = "buffer_id",
+		numbers = function(opts)
+			return string.format('%s', opts.raise(opts.id))
+		end,
 		diagnostics = "nvim_lsp",
 		diagnostics_indicator = function(count, level, diagnostics_dict, context)
 			local icon = level:match("error") and " " or " "
