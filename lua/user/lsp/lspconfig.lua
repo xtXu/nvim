@@ -42,6 +42,11 @@ lspconfig['texlab'].setup(opt)
 -- marksman
 lspconfig['marksman'].setup(opt)
 
+-- pyright
+-- local py_opt = require("user.lsp.settings.pyright")
+-- local py_opts = vim.tbl_deep_extend("force", py_opt, opt)
+-- lspconfig['pyright'].setup(py_opts)
+
 -- Clangd
 local clangd_opt = require("user.lsp.settings.clangd")
 -- local clangd_opts = vim.tbl_deep_extend("force", clangd_opt, opt)

@@ -116,6 +116,7 @@ return require('packer').startup(function(use)
 	use "hrsh7th/cmp-nvim-lsp-document-symbol" -- cmd line symbol source
 	use "hrsh7th/cmp-nvim-lsp-signature-help"
 	use "ray-x/lsp_signature.nvim"
+	use "kdheepak/cmp-latex-symbols"
 
 	-- snip engine & snip source
 	use { "L3MON4D3/LuaSnip", tag = "v1.*" }

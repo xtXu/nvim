@@ -27,6 +27,7 @@ mason_lspconfig.setup({
 		"clangd",
 		"sumneko_lua",
 		"marksman",
+		"pyright",
 	},
 	automatic_installation = false,
 })

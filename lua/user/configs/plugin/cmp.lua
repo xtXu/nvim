@@ -56,6 +56,17 @@ local get_ws = function (max, len)
 end
 
 cmp.setup {
+	-- sorting = {
+	-- 	comparators = {
+	-- 		cmp.config.compare.offset,
+	-- 		cmp.config.compare.exact,
+	-- 		cmp.config.compare.recently_used,
+	-- 		require("clangd_extensions.cmp_scores"),
+	-- 		cmp.config.compare.kind,
+	-- 		cmp.config.compare.sort_text,
+	-- 		cmp.config.compare.length,
+	-- 		cmp.config.compare.order,
+	-- 	},
 	sorting = {
 		comparators = {
 			cmp.config.compare.offset,
@@ -67,7 +78,7 @@ cmp.setup {
 			cmp.config.compare.length,
 			cmp.config.compare.order,
 		},
-	},
+	 },
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -129,6 +140,7 @@ cmp.setup {
 				luasnip = "[Snippet]",
 				buffer = "[Buffer]",
 				path = "[Path]",
+				latex_symbols = "[LATEX]",
 			})[entry.source.name]
 			-- vim_item.abbr = string.sub(vim_item.abbr,1,35)
 			if #vim_item.abbr > MAX_ABBR_WIDTH then
@@ -140,9 +152,10 @@ cmp.setup {
 		end,
 	},
 	sources = {
-		{ name = "nvim_lsp" },
+		{ name = "nvim_lsp", max_item_count = 1000000},
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
+		{ name = "latex_symbols" },
 		-- { name = 'nvim_lsp_signature_help' },
 		{ name = "buffer" },
 		{ name = "path" },
@@ -163,6 +176,9 @@ cmp.setup {
 	experimental = {
 		ghost_text = true,
 		native_menu = false,
+	},
+	completion = {
+		keyword_length = 2,
 	},
 }
 
