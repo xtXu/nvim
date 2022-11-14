@@ -77,6 +77,16 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+		buffers = {
+			mappings = {
+				i = {
+					["<C-d>"] = "delete_buffer",
+				},
+				n = {
+					["d"] = "delete_buffer",
+				}
+			}
+		}
   },
   extensions = {
     fzf = {
