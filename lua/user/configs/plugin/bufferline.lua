@@ -7,6 +7,12 @@ end
 bufferline.setup {
 	options = {
 		show_buffer_close_icons = false,
+		show_buffer_icons = true,
+		color_icons = true,
+		indicator = {
+				icon = '▎', -- this should be omitted if indicator style is not 'icon'
+				style = 'icon',
+		},
 		separator = "thin",
 		-- numbers = "buffer_id",
 		numbers = function(opts)
@@ -56,9 +62,9 @@ bufferline.setup {
 					matcher = function(buf)
 						return buf.filename:match('%.launch') or buf.filename:match('%.yaml') or buf.filename:match('%.xml')
 					end,
-					separator = { -- Optional
-						style = require('bufferline.groups').separator.tab
-					},
+					-- separator = { -- Optional
+					-- 	style = require('bufferline.groups').separator.tab
+					-- },
 				}
 			}
 		}

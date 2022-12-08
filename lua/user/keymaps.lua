@@ -127,7 +127,7 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", opts)
 vim.keymap.set("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", opts)
-vim.keymap.set("n", "<leader>p", "<cmd>Telescope neoclip initial_mode=normal<cr>", opts)
+vim.keymap.set("n", "<leader>p", "<cmd>Telescope neoclip initial_mode=normal theme=get_cursor<cr>", opts)
 vim.keymap.set("n", "<leader>fs", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>", opts)
 vim.keymap.set("n", "<leader>fS", "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<cr>", opts)
 vim.keymap.set("n", "<leader>fd", "<cmd>Telescope lsp_definitions initial_mode=normal<cr>", opts)
@@ -159,5 +159,11 @@ vim.keymap.set("n", "<leader>bd", ":bdelete<cr>", opts)
 
 -- markdown previewer
 vim.keymap.set("n", "<leader>mdp", ":MarkdownPreviewToggle<cr>", opts)
+
+-- neogen
+vim.api.nvim_set_keymap("n", "<leader>nc", "<cmd>lua require('neogen').generate({type='class'})<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>nf", "<cmd>lua require('neogen').generate({type='file'})<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>nt", "<cmd>lua require('neogen').generate({type='type'})<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>nn", "<cmd>lua require('neogen').generate()<CR>", opts)
 
 

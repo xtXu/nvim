@@ -72,8 +72,9 @@ return require('packer').startup(function(use)
 	use "ahmedkhalf/project.nvim"
 	use { "Shatur/neovim-session-manager", commit="4ce4d975313c73c3aa1410f2c918ce6fce900f01" }
 	use "jedrzejboczar/possession.nvim"
-	use 'simrat39/symbols-outline.nvim'
+	use "simrat39/symbols-outline.nvim"
 	-- use "famiu/bufdelete.nvim"
+	use "danymat/neogen"
 
 	-- treesitter
 	use {

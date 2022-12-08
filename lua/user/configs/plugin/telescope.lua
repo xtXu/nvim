@@ -14,6 +14,7 @@ telescope.setup {
 		-- 		exclude = {1, -1, -2}
 		-- 	}
 		-- },
+		dynamic_preview_title = true,
 		path_display = {"smart"},
 		file_ignore_patterns = {"build/", "devel/" ,"logs/"},
 
@@ -97,7 +98,7 @@ telescope.setup {
                                        -- the default case_mode is "smart_case"
     },
 		["ui-select"] = {
-      require("telescope.themes").get_dropdown {
+      require("telescope.themes").get_cursor {
         -- even more opts
       }
 		},
